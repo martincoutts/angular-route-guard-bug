@@ -1,0 +1,26 @@
+<h1>Route Guard Bug</h1>
+
+<div class="bug-description">
+  <span>To replicate the bug:</span>
+  <ol>
+    <li>Make sure you are on the homepage (/home)</li>
+    <li>Navigate to the object component using link on homepage</li>
+    <li>Navigate back using one of the "Navigate Back" buttons</li>
+    <li>
+      The URL will change to home and then an alert from the route guard will be
+      displayed
+    </li>
+    <li>
+      The URL will be "/home" and when you dismiss the alert the URL will switch
+      back to "/object"
+    </li>
+  </ol>
+  <span
+    >The navigation using location.back or history.back occurs and the URL
+    changes before the route guard can intervene and prevent the URL
+    changing.</span
+  >
+</div>
+
+<app-banner />
+<router-outlet></router-outlet>
