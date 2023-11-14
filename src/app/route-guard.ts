@@ -4,7 +4,7 @@ import {
   CanActivateFn,
 } from '@angular/router';
 
-export const canActivateRoute: CanActivateFn = (
+export const canDeactivateRoute: CanActivateFn = (
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot
 ) => {

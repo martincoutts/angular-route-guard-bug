@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ObjectComponent } from './object/object.component';
 import { AboutComponent } from './about/about.component';
-import { canActivateRoute } from './route-guard';
+import { canDeactivateRoute } from './route-guard';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -10,7 +10,7 @@ export const routes: Routes = [
   {
     path: 'object',
     component: ObjectComponent,
-    canDeactivate: [canActivateRoute],
+    canDeactivate: [canDeactivateRoute],
   },
   { path: 'about', component: AboutComponent },
 ];
